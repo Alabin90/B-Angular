@@ -1,0 +1,25 @@
+<p>
+  behaviorchild2-component works!
+</p>
+
+<div class="shadow rounded-3 mt-4" >
+  <div class="p-5"  *ngIf="behavior_obj.firstname" 
+  style=" background: linear-gradient(-650deg , green ,black);">
+      <p>Firstname: <input type="button " class="btn btn-dark form-control " value={{behavior_obj.firstname}} ></p>
+      <p>Lastname:<input type="button " class="btn btn-dark form-control " value={{behavior_obj.lastname}} ></p>
+      <p>Age:<input type="button " class="btn btn-dark form-control " value={{behavior_obj.age}} ></p>
+      <p>Email:<input type="button " class="btn btn-dark form-control " value={{behavior_obj.email}} ></p>
+
+     <div class="container-fluid  ">
+      <div class="row">
+       <div class="col-6">
+        <button  type="button" class="btn btn-outline-danger w-100 mx-auto">Delete</button>
+       </div>
+       <div class="col-6">  
+        <button  type="button" class="btn btn-outline-success w-100">Edit</button>
+        
+       </div>
+      </div>
+     </div>
+  </div>
+</div>

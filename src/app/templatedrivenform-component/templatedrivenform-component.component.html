@@ -1,0 +1,37 @@
+<p>
+  <b>templatedrivenform-component works!</b>
+</p>
+
+<div class="continer">
+  <div class="col-6 mx-auto">
+    <div class="p-3">
+      <h4 class="text-center text-primary"><b>Template-form-component</b></h4>
+     <form #fgroup="ngForm">
+      <input type="text" class="form-control my-3" placeholder="Firstname" [(ngModel)]="firstname" name="firname" #fname="ngModel" required [class.is-valid]="fname.valid && fname.dirty"  [class.is-invalid]="fname.invalid && fname.dirty" minlength="5">
+      <div *ngIf="fname.invalid && fname.touched">
+        <span class="text-center text-danger" *ngIf="fname?. errors?.['reqired']">this field is reqired </span>
+        <span class="text-center text-danger" *ngIf="fname?. errors?.['minlength']">the minimum length 5 reqired </span>
+      </div>
+
+    
+
+      <input type="text" class="form-control my-3" placeholder="City" [(ngModel)]="city" name="cty" #cty="ngModel" required [class.is-valid]="cty.valid && cty.dirty"  [class.is-invalid]="cty.invalid && cty.dirty" minlength="5">
+      <div *ngIf="cty.invalid && cty.touched">
+        <span class="text-center text-danger" *ngIf="cty?. errors?.['reqired']">this field is reqired </span>
+        <span class="text-center text-danger" *ngIf="cty?. errors?.['minlength']">the minimum length reqired </span>
+      </div>
+
+
+ <!-- <input type="text" class="form-control my-3" placeholder="email" [(ngModel)]="email" name="ema" #fname="ngModel" required [class.is-valid]="fname.valid && fname.dirty"  [class.is-invalid]="fname.invalid && fname.dirty" minlength="5">
+      <div *ngIf="femail.invalid && femail.touched">
+        <span class="text-center text-danger" *ngIf="femail?. errors?.['reqired']">this field is reqired </span>
+        <span class="text-center text-danger" *ngIf="femail?. errors?.['minlength']">the minimum length reqired </span>
+      </div> -->
+      
+
+      <input type="checkbox" [(ngModel)]="check" name="checky" #cc="ngModel" required [class.is-valid]="cc.valid && cc.dirty">
+      <button class="btn btn-primary w-100" (click)="submit()" [disabled]="fgroup.invalid" > Submit</button>
+     </form>
+    </div>
+  </div>
+</div>

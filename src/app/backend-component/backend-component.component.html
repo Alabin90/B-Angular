@@ -1,0 +1,28 @@
+<p>
+  backend-component works!
+</p>
+
+<div>
+  <div class="container col-10">
+    <div class="row">
+  <div class="card shadow" *ngFor="let  item of data" >
+   <div class=" col-md-3  my-4 p-5   text-center">
+      <p> {{item.id}}</p>
+      <p>{{item.name}}</p>
+      <p>{{item.username}}</p>
+      <p>{{item.phone}}</p>
+   </div>
+  </div>
+</div>
+</div>
+  <div>{{msg}}</div>
+</div>
+
+
+<!-- <form (ngSubmit)="onSubmit()">
+  <input type="text" name="firstName" [(ngModel)]="formData.firstName" placeholder="First Name" required><br>
+  <input type="text" name="lastName" [(ngModel)]="formData.lastName" placeholder="Last Name" required><br>
+  <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Email" required><br>
+  <input type="password" name="password" [(ngModel)]="formData.password" placeholder="Password" required><br>
+  <button type="submit">Sign Up</button>
+</form> -->

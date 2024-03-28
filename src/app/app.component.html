@@ -1,0 +1,118 @@
+
+
+<!-- <app-templatedrivenform></app-templatedrivenform> -->
+<!-- <div>
+
+  {{this.email}}
+
+    {{this.firstname}}
+
+</div>
+<app-templatedrivenform><app-templatedrivenform>
+
+  <div>
+  {{obj1.firstname}}
+</div>
+{{obj1.lastname}}
+<div>
+  {{obj1.age}}
+</div> -->
+
+
+
+
+
+
+<!-- <div >
+<div *ngFor="let obj of array4, let i=index">
+  <button  class="btn btn-dark " (click)="checkindex(i)">check</button>
+  <p>{{obj.firstname}}</p>
+ <input type="text" class="{{firststyling}}">
+ <input type="text" class="{{firststyling}}">
+  <div class="style1 ">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga impedit labore voluptas hic facere, necessitatibus itaque aperiam voluptates iure obcaecati esse reprehenderit laboriosam, quidem sunt dignissimos atque sed aspernatur nam?
+  </div>
+</div>
+
+<div class="text-black" [style.color]="special?'red':'blue'" [style.background-color]="special?'red': 'blue'">
+   hello world
+</div>
+<button class="btn btn-dark "  (click)="check()">
+  Check color
+</button>
+
+
+</div> -->
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/"><b><img src="../assets/img/AUG1.png" width="15%" alt=""> </b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/home">Home </a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/New-App"><b>NEW</b> </a>
+        </li>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/pipe"><b>Pipe</b> </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link text-success" routerLink="/backend"><b>Backend</b> </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/temp">Template </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/react">Reactive </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/Car"><b>Get</b> </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/signup">Signup </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/signin">Sigin </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/dashboard1">Dashboard </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/sign1">3Form </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/behaviorp"><b>behavior-Parent</b> </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/signup4"><b>Signup4</b> </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/parent"><b>Parent</b> </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/eventp"><b>EventParent</b> </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/eventc"><b>Eventchild</b> </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<router-outlet></router-outlet>

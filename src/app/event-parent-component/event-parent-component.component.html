@@ -1,0 +1,18 @@
+<p>
+  event-parent-component works!
+</p>
+
+<div>
+  <div class="shadow"  
+  style=" background: linear-gradient(-650deg , green ,black);">
+   <div class="my-4 p-5 text-center">
+    <h1>event</h1>
+    <input type="text" placeholder="text" class="form-control" [(ngModel)]="text" >
+    <button class="btn btn-dark my-3 col-3" (click)="send()"> Send</button>
+      
+   </div>
+   <div>Receiver: {{data}}</div>
+  </div>
+</div>
+
+<app-event-child-component [recivetext]="newtext" (eventemit)="receiverresponse($event)"></app-event-child-component>

@@ -1,0 +1,38 @@
+<body style=" background: linear-gradient(-650deg , red, green ,#210f2c);">
+
+<p> LandingPage works!</p>
+
+
+
+
+
+<input type="text" placeholder="Firstname" class="{{style}}" [(ngModel)]="first_name" >
+<input type="text" placeholder="Last_name" class="{{style}}" [(ngModel)]="last_name" >
+<input type="text" placeholder="@email" class="{{style}}" [(ngModel)]="email" >
+<input type="text" placeholder="Phone_number" class="{{style}}" [(ngModel)]="phone_number" >
+<input type="text" placeholder="Address" class="{{style}}" [(ngModel)]="address" >
+<input type="text" placeholder="Gender" class="{{style}}" [(ngModel)]="gender" >
+<button class="btn btn-dark my-3 col-3" (click)="addContact()"> Add</button>
+
+<div *ngFor="let user of Contacts let i=index">
+  <p>First Name : {{user.first_name }}</p>
+  <p>Last Name : {{user.last_name }}</p>
+  <p>email : {{user.email }}</p>
+  <p>Phone number : {{user.phone_number }}</p>
+  <p>Address : {{user.address }}</p>
+  <p>Gender : {{user.gender }}</p>
+
+  <div class="col-8 w-50">
+    <div class="shadow">
+      <button class="btn btn-primary my-3 mx-2">View</button>
+        <button class="btn btn-primary mx-3" (click)="ed()">Edit</button>
+      <button class="btn btn-danger my-3 mx-2" (click)="de(i)">Delete</button>
+    </div>
+  </div>
+
+
+<!-- view just one person  route to the index of 0 1 2 ....
+delete using filter
+edit edit it -->
+
+

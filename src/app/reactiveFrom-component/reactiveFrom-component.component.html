@@ -1,0 +1,29 @@
+<p>
+  <b>ReactiveFrom-component works!</b>
+</p>
+
+<div class="container col-6 shadow">
+  <h1 class="text-success text-center"> <b>Reactive-Form</b></h1>
+
+  <form [formGroup]="formone">
+   
+    <input type="text" class="form-control my-3" placeholder="Firstname" formControlName="firstname" required [class.is-valid]="formone.get('firstname')?.valid && formone.get('firstname')?.dirty"  [class.is-invalid]="formone.get('firstname')?.invalid && formone.get('firstname')?.dirty" minlength="8">
+    <div *ngIf="formone.get('firstname')?.invalid && formone.get('firstname')?.touched">
+      <span class="text-center text-danger" *ngIf="formone.get('firstname') ?. errors?.['reqired']">this field is reqired </span>
+      <span class="text-center text-danger" *ngIf="formone.get('firstname') ?. errors?.['minlength']">the minimum length 8 reqired </span>
+    </div>
+
+
+    <input type="text" placeholder="@email" class="form-control my-2" formControlName="email" required=" " [class.is-valid]="formone.get('email')?.valid && formone.get('email')?.dirty"  [class.is-invalid]="formone.get('email')?.invalid && formone.get('email')?.dirty" minlength="20" >
+    <div *ngIf="formone.get('email')?.invalid && formone.get('email')?.touched">
+      <span class="text-center text-danger" *ngIf="formone.get('email') ?. errors?.['minlength']">the minimum length 20 reqired </span>
+    </div>
+<input type="password" placeholder="password" class="form-control my-2" formControlName="password" [class.is-valid]="formone.get('password') ?.valid && formone.get('password')?.dirty"  [class.is-invalid]="formone.get('password')?.invalid && formone.get('password')?.dirty" maxlength="11" >
+
+<div *ngIf="formone.get('password')?.invalid && formone.get('password')?.touched">
+  <span class="text-center text-danger" *ngIf="formone.get('password') ?. errors?.['maxlength']">the maximum length 11 reqired </span>
+</div>
+
+<button class="btn btn-success w-100" [disabled]="formone.invalid" ><b>Submit</b></button>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<p>
+  behaviorchid1-component works!
+</p>
+
+<div>
+  <div class="shadow" *ngFor="let list of behavior_array" (click)="sendlist(list)" 
+  style=" background: linear-gradient(-650deg , green ,black);">
+   <div class="my-4 p-5 text-center">
+      <button class="btn btn-outline-success text-light  w-100"  
+      > {{list.firstname}}</button>
+      <p>{{list.lastname}}</p>
+      <p>{{list.age}}</p>
+      <p>{{list.email}}</p>
+   </div>
+  </div>
+</div>
